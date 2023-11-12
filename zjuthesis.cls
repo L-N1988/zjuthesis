@@ -20,6 +20,8 @@
 \DeclareStringOption{Title}
 \DeclareStringOption{TitleEng}
 \DeclareStringOption{SubmitDate}
+\DeclareStringOption{Cover}
+\DeclareStringOption{TOC}
 \DeclareStringOption[undergraduate]{Degree}
 \DeclareStringOption[general]{MajorFormat}
 \DeclareStringOption[thesis]{Type}

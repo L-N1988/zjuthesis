@@ -27,6 +27,8 @@
     Department      = 学院,
     SubmitDate      = 递交日期,
     MajorFormat     = general,
+		Cover						= false,						 % print cover page or not
+		TOC							= false,						 % print table of content or not
     Degree          = undergraduate,   % 'undergraduate' or 'graduate'
     Type            = thesis,          % 'thesis'   or 'design'
     Period          = paper,           % 'proposal' or 'paper' or 'final'
@@ -56,12 +58,18 @@
         \newcommand{\undergradcurrstage}{paper}
         \newrefsection
         
-        \coverstyle
-        \inputpage{final}{cover}
+				\ifthenelse{\equal{\Cover}{true}}{
+					\coverstyle
+					\inputpage{final}{cover}
+				}
+				{}
 
-        \prevstyle
-        \inputpage{final}{previous}
-        \inputpage{final}{toc}
+				\ifthenelse{\equal{\TOC}{true}}{
+					\prevstyle
+					\inputpage{final}{previous}
+					\inputpage{final}{toc}
+				}
+				{}
 
         \bodystyle
         \inputbody{final/content}
