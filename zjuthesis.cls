@@ -65,45 +65,7 @@
 
 \input{config/packages}
 
-\ifthenelse{\equal{\Degree}{undergraduate}}
-{
-    % undergraduate
-    \ifthenelse{\equal{\Type}{thesis}}
-    {
-        \newcommand{\TitleTypeName}{浙江大学本科生毕业论文}
-    }
-    {
-        \newcommand{\TitleTypeName}{浙江大学本科生毕业设计}
-    }
-}
-{
-    % graduate
-    \ifthenelse{\equal{\GradLevel}{doctor}}
-    {
-        % doctor
-        \ifthenelse{\equal{\Type}{thesis} \OR \equal{\Type}{design}}
-        {
-            % thesis or design
-            \newcommand{\TitleTypeName}{浙江大学博士学位论文}
-            \newcommand{\TitleTypeNameCover}{博士学位论文}
-        }
-        {}
-    }
-    {
-        % master
-        \ifthenelse{\equal{\Type}{thesis}}
-        {
-            % thesis
-            \newcommand{\TitleTypeName}{浙江大学硕士学位论文}
-            \newcommand{\TitleTypeNameCover}{硕士学位论文}
-        }
-        {
-            % design
-            \newcommand{\TitleTypeName}{浙江大学硕士专业学位论文}
-            \newcommand{\TitleTypeNameCover}{硕士专业学位论文}
-        }
-    }
-}
+\newcommand{\TitleTypeName}{浙江大学研究生课程论文}
 
 \input{config/path}
 \input{config/commands}
