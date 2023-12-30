@@ -1,0 +1,3 @@
+[submodule "fonts/latex-chinese-fonts"]
+	path = fonts/latex-chinese-fonts
+	url = https://github.com/L-N1988/latex-chinese-fonts
