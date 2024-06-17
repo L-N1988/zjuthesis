@@ -66,9 +66,16 @@
         \begin{tabularx}{.7\textwidth}{>{\fangsong}l >{\fangsong}X<{\centering}}
             \CoverTitle
             
+            \ifthenelse{\equal{\StudentLines}{1}}
+            {%   StudentLines == 1
             姓名与学号 & \uline{\hfill \StudentName~\StudentID \hfill} \\
+            }
+            {%   StudentLines == 2
+            姓名与学号    &  \uline{\hfill \StudentLineOne \hfill} \\
+                        &  \uline{\hfill \StudentLineTwo \hfill} \\
+            }
             指导教师   &  \uline{\hfill \AdvisorName \hfill} \\
-            年级与专业  &  \uline{\hfill \mbox{\Grade}级\Major \hfill} \\
+            年级  &  \uline{\hfill \mbox{\Grade}级\Major \hfill} \\
             \ifthenelse{\equal{\DepartmentLines}{1}}
             {%   DepartmentLines == 1
             所在学院    &  \uline{\hfill \Department \hfill} \\

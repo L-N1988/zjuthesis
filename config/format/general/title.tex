@@ -7,6 +7,9 @@
 \newcommand{\DepartmentLines}{1}
 \newcommand{\DepartmentLineOne}{\Department}
 \newcommand{\DepartmentLineTwo}{~}
+\newcommand{\StudentLines}{1}
+\newcommand{\StudentLineOne}{\StudentName}
+\newcommand{\StudentLineTwo}{~}
 
 \newcommand{\titletwolines}[2]{
     \renewcommand{\TitleLines}{2}
@@ -25,3 +28,10 @@
     \renewcommand{\DepartmentLineOne}{#1}
     \renewcommand{\DepartmentLineTwo}{#2}
 }
+
+\newcommand{\studenttwolines}[2]{
+    \renewcommand{\StudentLines}{2}
+    \renewcommand{\StudentLineOne}{#1}
+    \renewcommand{\StudentLineTwo}{#2}
+}
+
