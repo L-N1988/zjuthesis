@@ -27,8 +27,8 @@
     Department      = 学院,
     SubmitDate      = 递交日期,
     MajorFormat     = general,
-		Cover						= true,						 % print cover page or not
-		TOC							= true,						 % print table of content or not
+		Cover           = true,						 % print cover page or not
+		TOC             = true,						 % print table of content and abstract or not
     Degree          = undergraduate,   % 'undergraduate' or 'graduate'
     Type            = thesis,          % 'thesis'   or 'design'
     Period          = paper,           % 'proposal' or 'paper' or 'final'
@@ -69,8 +69,8 @@
 
 				\ifthenelse{\equal{\TOC}{true}}{
 					\prevstyle
-					\inputpage{final}{previous}
-					\inputpage{final}{toc}
+					\inputpage{final}{previous} % abstract
+					\inputpage{final}{toc} % table of content
 				}
 				{}
 
